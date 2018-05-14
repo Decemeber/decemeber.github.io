@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="main-body">
+            <div class="header">
+             my name is you baba
+            </div>
+            <div class="main-content">
+
+            </div>
+            <div class="footer">
+
+            </div>
+        </div>
+        <div class="fbi-warning" id="fbi_hide">
+            <div class="">
+                <p class="fbi-head">FBI WARNING</p>
+                <p class="fbi-text">Federal law provides severe civil  and criminal penalties for the unauthorized reproduction,
+                distribution,or exhibition of copyrighted motion prictures(Title 17, United States Code, Sections
+                501 and 508).The federal bureau of Investigation investigate allegations of criminal copyright
+                infringement.
+                <br>(Title 17, United States Code, Section 506)</p>
+            </div>
+        </div>
+        <div class="cover" id="j_cover">
+            <div class="cover-contain">
+                <img src="images/liumeilin.png" alt="" id="bg_music">
+                <audio src="audios/meilin.mp3" autoplay loop id="bg_audio"></audio>
+                <!-- <button type="button" name="button" id="bt1">与情缘书</button>
+                <button type="button" name="button" id="bt2">独立寒江</button> -->
+                <div class="welcome-text">
+                    <p>From Stranglethorn Vale<br>this music is for every gamer that ever young</p>
+                </div>
+            </div>
+            <div class="log-text" id="j_welcome">
+                Welcome
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(function() {
+            var img = document.getElementById('bg_music');
+            var n = 0 ;
+            js_music = setInterval(function() {
+                n = n + .1;
+                img.style.transform='rotate('+n+'deg)';
+            },10);
+            // document.getElementById('bt1').onclick = function() {
+            //     document.getElementById('bg_audio').src = 'audios/meilin.mp3'
+            // }
+            // document.getElementById('bt2').onclick = function() {
+            //     document.getElementById('bg_audio').src = 'audios/mingyue.mp3'
+            // }
+            $('#j_welcome').click(function() {
+                $('#j_cover').slideUp('slow');
+                setTimeout(function() {
+                    $('#fbi_hide').fadeOut(2000);
+                },1000)
+            })
+        })
+    </script>
+    </body>
+</html>
